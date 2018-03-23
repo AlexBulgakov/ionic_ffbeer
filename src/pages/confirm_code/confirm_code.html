@@ -1,0 +1,23 @@
+<ion-header>
+
+</ion-header>
+
+
+<ion-content>
+  <img class="loginLogo" src="./assets/img/logo.png">
+  <form (submit)="doLogin()">
+    <p class="confirmCode">SMS с паролем отправлена на ваш номер<br>введите новый пароль в форму ниже</p>
+
+    <ion-list>
+      <ion-item id="accountCodeWrapper">
+        <!--<ion-label fixed></ion-label>-->
+        <ion-input text-center [(ngModel)]="account.code" name="code" id="accountCode"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button id="enterButtonCode" ion-button color="white" block>{{ 'ВХОД' }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>

@@ -1,0 +1,3 @@
+# update api version from local copy
+
+npm uninstall iikobiz-serverapi-raml && npm install ../angular-biz

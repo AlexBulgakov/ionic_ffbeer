@@ -1,0 +1,10 @@
+<ion-list class="catalog" *ngIf="isCorrectAny(); else sorryEmpty" >
+
+  <div *ngFor="let product of products">
+    <product-item *ngIf="isCorrect(product)" [data]="product" [showInvalid]="showInvalid"></product-item>
+  </div>
+</ion-list>
+<ng-template #sorryEmpty>
+  <div text-center>{{emptyMsg}}</div>
+  <!--<empty-card [msg]="emptyMsg"></empty-card>-->
+</ng-template>

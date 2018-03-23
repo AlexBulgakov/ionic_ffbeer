@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid class="catalog">
+    <ion-row>
+      <ion-col col-12>
+        <ion-item id="searchByName">
+          <!-- todo deniso set value="Mort" to  debug wishlist / basket -->
+          <ion-input type="text" placeholder="Поиск по названию" value="" [(ngModel)]="query"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="productGroups && !query" class="catalog">
+    <ion-row *ngFor="let group of productGroups">
+      <ion-col class="catalog_group" text-right col-12 (click)="openCategory(group)" tappable
+               [ngStyle]="{'background-image' : 'url(' + getImage(group) + ')', 'background-size': 'cover', 'background-position': 'center'}"
+      >
+<!--{{group.name}} ({{group._products.length}})-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <products-list *ngIf="products && query" [products]="products" [filter]="getFilter()"></products-list>
+
+  <!--
+    <ion-list>
+      <ion-item *ngFor="let p of productCategories">
+        &lt;!&ndash; todo deniso category img &ndash;&gt;
+        <ion-icon large item-start name="beer"></ion-icon>
+        <h2>{{ p.name }}</h2>
+        <button  *ngIf="p._products.length" (click)="openCategory(p)" ion-button clear item-end>View</button>
+      </ion-item>
+    </ion-list>
+  -->
+
+</ion-content>

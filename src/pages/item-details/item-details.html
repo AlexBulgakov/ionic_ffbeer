@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!--<ion-title>{{selectedItem.name}}</ion-title>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding-horizontal>
+  <product-item [isFull]="true" [data]="selectedItem"></product-item>
+</ion-content>

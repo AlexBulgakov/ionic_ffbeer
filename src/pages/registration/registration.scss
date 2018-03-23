@@ -1,0 +1,95 @@
+page-registration {
+  .loginLogo {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  ion-label{
+    text-overflow: inherit;
+    white-space: pre-wrap;
+  }
+
+  #registrationForm {
+    width: 100%;
+
+    & > * {
+      margin: 0 auto;
+    }
+
+    ion-item {
+      margin: 0 auto;
+      background: none;
+      padding: 0;
+
+      .item-inner{
+        border-bottom: 2px solid rgba(20, 20, 20, 0.9);
+      }
+
+      ion-input input {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+
+    ion-item.checkboxable .item-inner //not typo
+    {
+      border-bottom: 0;
+      ion-label{
+        font-size: 16px;
+      }
+    }
+  }
+
+  .text-input-md {
+    //font-size: 24px;
+    color: #141414;
+    text-transform: uppercase;
+    border-bottom: 0;
+    outline: 0;
+  }
+
+  #enterButton {
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 30px;
+  }
+
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+    border-bottom: 0;
+    box-shadow: none;
+  }
+
+  @media screen and (min-width: 320px){
+    #registrationForm > * {
+      width: 260px;
+    }
+  }
+
+  @media screen and (min-width: 375px){
+    #registrationForm > * {
+      width: 295px;
+    }
+  }
+
+  @media screen and (min-width: 414px){
+    #registrationForm > * {
+      width: 320px;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    #registrationForm > * {
+      width: 480px;
+    }
+  }
+
+  @media screen and (min-width: 1300px){
+    #registrationForm > * {
+      width: 480px;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+page-login {
+  .loginLogo {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+  }
+
+  #loginForm {
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+
+    ion-item {
+      display: block;
+      margin: 0 auto;
+      background: none;
+      padding: 0;
+
+      .item-inner{
+        border-bottom: 1px solid rgba(20, 20, 20, 0.9);
+      }
+
+      ion-input input {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  #additionalButtons{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  .text-input-md {
+    font-size: 24px;
+    color: #141414;
+    text-transform: uppercase;
+    border-bottom: 0;
+    outline: 0;
+  }
+
+  .text-input::placeholder {
+    font-size: 16px;
+  }
+
+  #enterButton {
+    box-sizing: border-box;
+    border-radius: 0;
+    margin: 0 auto;
+    //margin-top: 20%;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+    border-bottom: 0;
+    box-shadow: none;
+  }
+
+  @media screen and (max-height: 450px) {
+    .loginLogo {
+      top: 20px!important;
+    }
+  }
+
+  @media screen and (min-width: 320px){
+    .loginLogo {
+      //width: 290px;
+      //height: 174px;
+      top: 150px;
+    }
+
+    #loginForm ion-item {
+      width: 260px;
+    }
+
+    #loginForm #numberPhone {
+      margin-top: 80px;
+    }
+
+    .label,
+    .text-input {
+      font-size: 22px;
+    }
+
+    .text-input::placeholder {
+      font-size: 15px;
+    }
+
+    .button-inner {
+      font-size: 20px;
+    }
+
+    #enterButton {
+      display: block;
+      width: 290px;
+      margin-top: 40px;
+      padding: 25px;
+    }
+  }
+
+  @media screen and (min-width: 375px){
+    .loginLogo {
+      //width: 278px;
+      //height: 189px;
+      top: 190px;
+    }
+
+    #loginForm ion-item {
+      width: 295px;
+    }
+
+    #loginForm #numberPhone {
+      margin-top: 140px;
+    }
+
+    .label,
+    .text-input {
+      font-size: 22px;
+    }
+
+    .text-input::placeholder {
+      font-size: 22px;
+    }
+
+    .button-inner {
+      font-size: 23px;
+    }
+
+    #enterButton {
+      width: 320px;
+      margin-top: 50px;
+      padding: 30px;
+    }
+  }
+
+  @media screen and (min-width: 414px){
+    .loginLogo {
+      //width: 292px;
+      //height: 199px;
+      top: 190px;
+    }
+
+    #loginForm ion-item {
+      width: 320px;
+    }
+
+    #loginForm #numberPhone {
+      margin-top: 140px;
+    }
+
+    .label,
+    .text-input {
+      font-size: 32px;
+    }
+
+    .text-input::placeholder {
+      font-size: 18px;
+    }
+
+    .button-inner {
+      font-size: 23px;
+    }
+
+    #enterButton {
+      width: 360px;
+      margin-top: 50px;
+      padding: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .loginLogo {
+      //width: 350px;
+      //height: 238px;
+      //margin-top: 120px;
+    }
+
+    #loginForm ion-item {
+      width: 480px;
+    }
+
+    #loginForm #numberPhone {
+      margin-top: 240px;
+    }
+
+    .label,
+    .text-input {
+      font-size: 48px;
+    }
+
+    .text-input::placeholder {
+      font-size: 28px;
+    }
+
+    .button-inner {
+      font-size: 44px;
+    }
+
+    #enterButton {
+      width: 500px;
+      margin-top: 80px;
+      padding: 45px;
+    }
+  }
+
+  @media screen and (min-width: 1300px){
+    .loginLogo {
+      //width: 350px;
+      //height: 238px;
+      top: 190px;
+    }
+
+    #loginForm ion-item {
+      width: 480px;
+    }
+
+    #loginForm #numberPhone {
+      margin-top: 140px;
+    }
+
+    .label,
+    .text-input {
+      font-size: 48px;
+    }
+
+    .text-input::placeholder {
+      font-size: 28px;
+    }
+
+    .button-inner {
+      font-size: 35px;
+    }
+
+    #enterButton {
+      width: 500px;
+      margin-top: 50px;
+      padding: 30px;
+    }
+  }
+}

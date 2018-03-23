@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="send(f)" >
+    <ion-item>
+      <ion-label class="subject" floating>Тема</ion-label>
+      <ion-input floating ngModel required type="text" name="title" class="theme"></ion-input>
+    </ion-item>
+    <ion-item class="message">
+      <ion-label floating>Сообщение</ion-label>
+      <ion-textarea ngModel required name="message"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" color="light" block>Отправить</button>
+  </form>
+</ion-content>

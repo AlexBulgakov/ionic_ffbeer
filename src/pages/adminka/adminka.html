@@ -1,0 +1,73 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Вы нашли скрытый уровень! :)</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <b>App version</b>
+  <ion-grid>
+<!--
+    <ion-row>
+      <ion-col>appName</ion-col><ion-col>{{appName}}</ion-col>
+    </ion-row>
+-->
+    <ion-row>
+      <ion-col>packageName</ion-col><ion-col>{{packageName}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>versionCode</ion-col><ion-col>{{versionCode}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>versionNumber</ion-col><ion-col>{{versionNumber}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <b>Device info</b>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Model</ion-col><ion-col>{{device.manufacturer}} - {{device.model}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>OS version</ion-col><ion-col>{{device.platform}} - {{device.version}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Cordova</ion-col><ion-col>{{device.cordova}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Resolution</ion-col><ion-col>{{window.screen.width}}px * {{window.screen.height}}px x{{window.devicePixelRatio}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <b>API info</b>
+  <ion-grid>
+    <ion-row>
+      <ion-col>API user/secret</ion-col><ion-col>{{getApiUserSecret()}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Last request id</ion-col><ion-col>{{lastReqId}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card class="bg_select bg_select_1">
+    <ion-card-content>
+      <button (click)="chooseBackground(1)" ion-button block>Выбрать фон</button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="bg_select bg_select_2">
+    <ion-card-content>
+      <button (click)="chooseBackground(2)" ion-button block>Выбрать фон</button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="bg_select bg_select_3">
+    <ion-card-content>
+      <button (click)="chooseBackground(3)" ion-button block>Выбрать фон</button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

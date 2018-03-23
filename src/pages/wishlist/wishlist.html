@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <products-list *ngIf="products" [products]="products" [filter]="getFilter()" emptyMsg="в избранном пусто"></products-list>
+</ion-content>

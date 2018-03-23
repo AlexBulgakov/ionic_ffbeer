@@ -1,0 +1,17 @@
+empty-card {
+  ion-card {
+    ion-card-content.card-content{
+      height: 100%;
+      padding-top: 100px;
+
+      font-family: CoreRhino35Light, sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+
+      background: url("../assets/img/logo.png") no-repeat;
+      background-position: center bottom;
+      background-size: auto 20px;
+      background-repeat: no-repeat;
+    }
+  }
+}

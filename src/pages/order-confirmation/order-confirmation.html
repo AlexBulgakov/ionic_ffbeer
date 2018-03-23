@@ -1,0 +1,39 @@
+<!--
+  Generated template for the OrderConfirmationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Заказ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngIf="products" class="justWideCard">
+    <ion-card-content>
+      <ol>
+          <div *ngFor="let product of products">
+            <li text-right *ngIf="doFilter(product)">
+              <div style="font-weight: bold" text-right>{{product.name}}</div>
+              <div text-right>{{product.weight}} л. x {{getAmount(product)}} шт.</div>
+              <div text-right>{{product.price}}x{{getAmount(product)}}={{product.price*getAmount(product)}} РУБ.</div>
+            </li>
+          </div>
+      </ol>
+      <div padding-top text-right *ngIf="totalAmount">ИТОГО: <b>{{totalAmountRub}}</b> РУБЛЕЙ <b>{{totalAmountKop ||
+        "00"}}</b> КОПЕЕК
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer padding>
+  <ion-toolbar>
+    <button block color="light" ion-button (click)="doOrder()">ПОДТВЕРДИТЬ</button>
+  </ion-toolbar>
+</ion-footer>

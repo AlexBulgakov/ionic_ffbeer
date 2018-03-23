@@ -1,0 +1,125 @@
+product-item {
+  ion-grid p.description{
+    font-size: 10px;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .bottlePreview{
+    display: inline;
+    max-height: 180px;
+    width: auto;
+  }
+
+  ion-card.card {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    margin: 16px 0;
+    width: 100%;
+  }
+
+  ion-card.card ion-item.item{
+    background: none;
+  }
+
+  ion-grid ion-row ion-col p.description.item-desc{
+    font-size: 14px;
+  }
+
+  .bottombuttons{
+    padding-left: 0;
+  }
+
+  .bottombuttons,
+  .bottombuttons ion-icon{
+    font-size: 16px;
+  }
+
+  .bottombuttons [item-left] {
+    margin-right: 8px;
+  }
+
+  .bottombuttons [text-right] {
+    margin-right: 25%;
+  }
+
+  /*
+  .bottombuttons {
+    bottom: 20px;
+    position: absolute;
+  }
+  */
+
+  .bottombuttons ion-icon,
+  .bottombuttons .addtobasket {
+    padding: 5px;
+  }
+
+  .bottombuttons .addtobasket {
+    background-color: #ffba00;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-right: 0px;
+  }
+
+  .bottombuttons ion-icon, .bottombuttons .amounter {
+    border-radius: 5px;
+    background-color: #ffba00;
+    color: #fff;
+    min-height: 0px; /* fix for iphone 5 small screen */
+    padding: 3.5px 9px;
+    margin-right: 0px;
+  }
+
+  .bottombuttons ion-icon, .bottombuttons .amounter ion-icon{
+    margin: 0;
+  }
+
+  .amounter{
+    display: inline-block;
+    text-align: center;
+    min-width: 50px;
+
+    ion-icon.add{
+      float: right;
+    }
+  }
+
+  .bottombuttons ion-icon.fav {
+    padding: 6.5px;
+  }
+
+  .favorite .bottombuttons ion-icon.fav{
+    color: #f00;
+
+  }
+
+  .bottombuttons ion-icon{
+    cursor: pointer;
+  }
+
+  .downBasket {
+    overflow: hidden;
+  }
+
+  .downBasket span.left {
+
+    width: 150px;
+    text-align: center;
+    float: left;
+  }
+
+  .downBasket span.right {
+    width: 150px;
+    text-align: center;
+    float: right;
+  }
+
+  .col-named{
+    font-weight: bold;
+  }
+
+  ion-card.invalid-record ion-card-title{
+    background-color: #f00;
+  }
+}

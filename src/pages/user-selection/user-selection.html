@@ -1,0 +1,12 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Выберите пользователя</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <user-selection [usersList]="usersList" (onSelectUser)="selectUser($event)"></user-selection>
+</ion-content>

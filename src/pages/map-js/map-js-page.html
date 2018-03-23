@@ -1,0 +1,72 @@
+<ion-header>
+  <!-- todo deniso no-border-bottom -->
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+    <ion-title>Карта бутиков</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <agm-map *ngIf="pageType == 'mappedItems'"
+           [usePanning]="true"
+           (mapReady)="mapReady()"
+           (mapClick)="hideMarker()"
+           [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <agm-marker *ngFor="let markerItem of mapItems"
+        (markerClick)="onMarkerClick(markerItem)"
+        [latitude]="markerItem.lat" [longitude]="markerItem.lng"
+        [title]="markerItem.title"
+    >
+<!--
+      <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+        <ng-template>
+          <map-item-baloon [data]="markerItem"></map-item-baloon>
+        </ng-template>
+      </agm-snazzy-info-window>
+-->
+    </agm-marker>
+  </agm-map>
+
+</ion-content>
+
+<!--
+<ion-pullup *ngIf="selectedMarker && pageType == 'mappedItems'" #pullup
+            (onExpand)="footerExpanded()" (onCollapse)="footerCollapsed()"
+            [(state)]="footerState" [initialState]="pullupInitialState"
+            [maxHeight]="pullupMaxHeight">
+
+&lt;!&ndash;  <ion-pullup-tab [footer]="pullup" (tap)="toggleFooter()">
+    <ion-icon name="arrow-up" *ngIf="footerState == 0"></ion-icon><ion-icon name="arrow-down" *ngIf="footerState == 1"></ion-icon>
+  </ion-pullup-tab>&ndash;&gt;
+  <ion-toolbar class="addressToolbar" (tap)="toggleFooter()">
+    <p class="addressTitle">{{selectedMarker.title}}</p>
+    <span class="addressString">{{selectedMarker.address}}</span>
+    <span class="addressString">{{selectedMarker.place.formatted_phone_number}}</span>
+  </ion-toolbar>
+  <ion-content>
+    <map-item-description [data]="selectedMarker"></map-item-description>
+  </ion-content>
+</ion-pullup>
+-->
+
+<ion-footer *ngIf="selectedMarker" padding-horizontal>
+  <ion-toolbar class="mapToolbar" *ngIf="selectedMarker">
+    <p class="addr">{{selectedMarker.address}}</p>
+    <div class="details">
+      <img class="photo" float-left src="{{selectedMarker.place.photos[0].getUrl({'maxWidth': 300, 'maxHeight': 150})}}" />
+      <div class="open_hours" float-right>
+        <p *ngFor="let timePeriod of selectedMarker.openingHours">
+          {{timePeriod.firstDay + (timePeriod.lastDay ? "-" + timePeriod.lastDay : "")}}
+          {{timePeriod.period.open.hours}}:{{
+            timePeriod.period.open.minutes ? timePeriod.period.open.minutes : "00"}}-{{
+            timePeriod.period.close.hours}}:{{
+          timePeriod.period.close.minutes ? timePeriod.period.close.minutes : "00"}}
+        </p>
+        <p class="is_open_now">{{selectedMarker.place.opening_hours.open_now ? "Открыто" : "Закрыто"}}</p>
+      </div>
+    </div>
+    <a class="call_now" text-center [href]="calltoUrl()">ПОЗВОНИТЬ</a>
+  </ion-toolbar>
+</ion-footer>

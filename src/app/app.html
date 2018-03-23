@@ -1,0 +1,20 @@
+<ion-menu id="mainMenu" [content]="content">
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        &#183; {{p.title}}
+          <span *ngIf="menuItemSubject(p)" class="circle">{{menuItemSubject(p) | async}}</span>
+      </button>
+      <img class="logoMenu" src="./assets/img/logo.png">
+      <button ion-item id="faq" (click)="openPage(faqPageMenuItem)">
+        &#183; FAQ
+      </button>
+      <button ion-item id="exitButton" (click)="logout()">
+        &#183; Выйти
+      </button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

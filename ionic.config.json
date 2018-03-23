@@ -1,0 +1,14 @@
+{
+  "name": "beer-culture-consumer",
+  "type": "ionic-angular",
+  "app_id": "a9551377",
+  "proxies": [
+    {
+      "path": "/api/",
+      "proxyUrl": "http://biz.labex.pro/api/"
+    }
+  ],
+  "integrations": {
+    "cordova": {}
+  }
+}

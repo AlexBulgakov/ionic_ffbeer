@@ -1,0 +1,117 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import "reset";
+@import "menu";
+//@import "../../node_modules/ionic2-auto-complete/auto-complete";
+
+ion-auto-complete ion-searchbar.searchbar{
+  background: none;
+}
+
+@font-face {
+  font-family: CoreRhino35Light;
+  src: local("CoreRhino35Light"),
+  url(../assets/fonts/CoreRhino35Light.otf);
+}
+
+.ffbeer-error-hint{
+  color: #f00;
+  font-weight: bold;
+}
+
+// invalid records require more height to display debug info
+.ffbeer-card-height:not(.invalid-record) {
+  height: 220px;
+}
+
+.ffbeer-card-height{
+  background-color: #ffffff;
+  border-radius: 5px;
+
+  img{
+    max-height: 120px;
+  }
+}
+
+.justWideCard{
+  margin: 0;
+  width: auto;
+}
+
+ion-title.title{
+  padding: 0 20px 1px;
+  font-family: CoreRhino35Light, sans-serif;
+  text-transform: uppercase;
+  .toolbar-title{
+    text-align: right;
+  }
+}
+
+html, .content, label, input, select, textarea, button {
+  font-family: CoreRhino35Light, sans-serif;
+  font-weight: normal;
+}
+
+.content {
+  background: url("../assets/img/bg1.png");
+  background-size: cover;
+}
+
+/*
+removed breaking CSS rule for iOS - toolbar border under title
+todo deniso check in android
+ */
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios{
+  border-style: none;
+}
+
+.header-md::after, .footer-md::after{
+  background-image: none;
+}
+
+/*
+was made for index page refresh first of all. but should be applyable to other pages
+ */
+button.button{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+ion-header ion-navbar button.bar-button-default,
+ion-header ion-toolbar button.bar-button-default,
+#menuIcon {
+  color: #141414;
+}
+
+ion-header ion-navbar button.bar-button-default, ion-header ion-toolbar button.bar-button-default, #menuIcon, button span, #textSpanButton {
+  color: #141414;
+}
+
+ion-footer ion-toolbar{
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+ion-loading .loading-wrapper{
+  background: none !important;
+}
+
+.standard-font{
+  font-size: 16px !important;
+}

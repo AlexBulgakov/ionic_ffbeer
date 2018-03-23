@@ -1,0 +1,33 @@
+<ion-content>
+  <img class="loginLogo" src="./assets/img/logo.png">
+  <form id="loginForm" (submit)="doLogin()">
+    <ion-list>
+
+      <ion-item id="numberPhone">
+        <ion-label no-padding>+7</ion-label>
+        <ion-input #phone required minlength="14"
+                   no-padding type="tel" [(ngModel)]="account.phone" name="phone"
+                   text-left placeholder="введите телефон"></ion-input>
+      </ion-item>
+
+      <div text-center *ngIf="phone.invalid"
+           class="ffbeer-error-hint">Введите пожалуйста телефон <br/> в формате +7 (999) 1234567</div>
+
+      <ion-item id="password">
+        <!-- label made specially to align login and pwd fields -->
+        <ion-label no-padding style="visibility: hidden">+7</ion-label>
+        <ion-input no-padding [(ngModel)]="account.password" name="password"
+                   text-left placeholder="введите пароль" type="password"></ion-input>
+      </ion-item>
+
+      <div>
+        <button id="enterButton" ion-button color="white" block>ВОЙТИ</button>
+      </div>
+    </ion-list>
+  </form>
+
+  <div id="additionalButtons">
+    <a href="#" float-left (click)="registration()">Регистрация</a>
+    <a href="#" float-right (click)="restoreRassword()">Забыл пароль</a>
+  </div>
+</ion-content>

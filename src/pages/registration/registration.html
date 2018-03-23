@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <img class="loginLogo" src="./assets/img/logo.png">
+  <form id="registrationForm" (submit)="doRegister()">
+    <ion-list>
+
+      <ion-item class="bordered" id="numberPhone">
+        <ion-label no-padding>+7</ion-label>
+        <ion-input mask="(999) 999-9999" no-padding type="tel" [(ngModel)]="account.phone" name="phone"
+                   text-left placeholder="введите телефон" required></ion-input>
+      </ion-item>
+
+      <ion-item class="bordered" id="name">
+        <ion-input no-padding [(ngModel)]="account.name" name="name"
+                   text-left placeholder="введите имя" required></ion-input>
+      </ion-item>
+
+      <ion-item class="bordered" id="surname">
+        <ion-input no-padding [(ngModel)]="account.surname" name="surname"
+                   text-left placeholder="введите фамилию" required></ion-input>
+      </ion-item>
+
+      <ion-item class="bordered" id="email">
+        <ion-input no-padding [(ngModel)]="account.email" name="email"
+                   text-left placeholder="введите email" required></ion-input>
+      </ion-item>
+
+      <ion-item class="bordered" id="password">
+        <!-- label made specially to align login and pwd fields -->
+<!--
+        <ion-label no-padding style="visibility: hidden">+7</ion-label>
+-->
+        <ion-input no-padding [(ngModel)]="account.password" name="password"
+                   text-left placeholder="введите пароль"></ion-input>
+      </ion-item>
+
+      <ion-item class="checkboxable">
+        <ion-label>Я подтверждаю, что мне есть 18 лет</ion-label>
+        <ion-checkbox [(ngModel)]="ZabirayMenyaSkoreyUvoziZaStoMorey" name="ZabirayMenyaSkoreyUvoziZaStoMorey"></ion-checkbox>
+      </ion-item>
+
+      <ion-item class="checkboxable">
+        <ion-label>Я даю согласие на обработку персональных данных</ion-label>
+        <ion-checkbox [(ngModel)]="personalDataOk" name="personalDataOk"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <div class="standard-font">
+      Регистрируясь вы подтверждаете свое согласие с <a (click)="showRules()">правилами сервиса</a>
+    </div>
+
+    <div>
+      <button id="enterButton" ion-button color="white" block>Зарегистрироваться</button>
+    </div>
+  </form>
+</ion-content>

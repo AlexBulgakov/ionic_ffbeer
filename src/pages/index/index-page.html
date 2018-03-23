@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="qrCodeBox">
+    <p text-center class="hello">{{greeting}}</p>
+    <p *ngIf="bonuses" text-center class="helloLast">
+      У Вас
+      <span class="bonusCounter">{{bonuses}}</span>
+      {{bonusesPlural}}.
+    </p>
+    <canvas *ngIf="!qrError" #QRCodeCanvas id="QRCodeCanvas" class="qrCode"></canvas>
+    <h2 *ngIf="qrError" id="qrError" text-center>{{qrError}}</h2>
+  </div>
+  <div class="logoIndex">
+    <img src="./assets/img/logo.png" />
+  </div>
+</ion-content>

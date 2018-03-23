@@ -1,0 +1,64 @@
+<ion-card (click)="openItemFull()" tappable [ngClass]="{'ffbeer-card-height': !isFull, 'invalid-record': !data.isValid && showInvalid}">
+  <ion-grid>
+    <ion-row [ngClass]="{'favorite': isFavorite}">
+      <ion-col text-center col-3>
+        <img *ngIf="getImage()" item-left src="{{getImage()}}" class="bottlePreview">
+      </ion-col>
+      <ion-col text-right col-9>
+
+        <ion-card-title text-left>{{data.name}}</ion-card-title>
+
+        <ion-item class="bottombuttons">
+          <span item-left>{{data.price}} руб</span>
+          <ion-icon *ngIf="!isFull"
+                    class="fav" (click)="toggleFavorites($event)" name="heart"></ion-icon>
+
+          <span *ngIf="!isStopListed() && !isBasketButtonVisible()"
+                item-right class="amounter">
+            <ion-icon class="remove" (click)="removeFromBasket($event)" item-left name="remove-circle"></ion-icon><span class="amount">{{basketAmount}}</span><ion-icon class="add" (click)="addToBasket($event)" item-right name="add-circle"></ion-icon>
+          </span>
+          <span *ngIf="!isStopListed() && isBasketButtonVisible() && !isFull"
+                item-right class="addtobasket cur_pnt"
+                (click)="addToBasket($event)">В корзину
+          </span>
+        </ion-item>
+
+        <p *ngIf="!isFull" class="description item-desc">{{descriptionLimited()}}</p>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="isFull">
+      <ion-col class="bottombuttons downBasket" text-right>
+        <span *ngIf="!isStopListed()" item-left
+               class="addtobasket cur_pnt left"
+               (click)="toggleFavorites($event)">В избраное</span>
+        <span item-right
+              class="addtobasket cur_pnt right"
+              (click)="addToBasket($event)">В&nbsp;корзину</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col *ngIf="isFull" >
+        <p class="description item-desc">{{descriptionLimited()}}</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let field of nonEmptyFieldsToShow">
+      <ion-col col-6 class="col-named">{{field[1]}}: </ion-col><ion-col col-6>{{fieldValue(field[0])}}</ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="!data.isValid && showInvalid">
+      <ion-col col-12>
+        Теги: {{data.tags}}
+      </ion-col>
+      <ion-col col-12>
+        Пустые поля:
+        <p *ngFor="let field of data.emptyFields">
+          {{field[0]}}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

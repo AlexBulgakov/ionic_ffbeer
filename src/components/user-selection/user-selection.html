@@ -1,0 +1,19 @@
+<div>
+<ion-list radio-group>
+  <ion-item *ngFor="let u of usersList">
+    <ion-label>
+      {{ u.id }}
+    </ion-label>
+<!--
+    //todo how to put here multiline ?
+    <div item-content end>
+      {{ u.id }}<br />
+      {{ u.email }}
+    </div>
+-->
+    <ion-radio [value]="u.id"></ion-radio>
+  </ion-item>
+</ion-list>
+
+<button ion-button color="primary" (click)="selectUser()">Select</button>
+</div>

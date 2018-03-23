@@ -1,0 +1,229 @@
+ion-app ion-menu ion-list.list button ion-label{
+  margin: 0;
+}
+
+ion-app ion-menu ion-list.list button{
+  min-height: 2.4em;
+}
+
+#mainMenu .content{
+  background: #fff;
+}
+
+#mainMenu .input-wrapper .label {
+  font-family: CoreRhino35Light, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #141414;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: red;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 5px;
+  position: absolute;
+  top: 7px;
+  text-align: center;
+}
+
+.logoMenu {
+  position: absolute;
+  bottom: 100px;
+  display: block;
+  /*
+  todo deniso has no sense cause we use img?
+  background: url("../assets/img/logo_menu.png") no-repeat;
+  */
+  background-size: cover;
+  width: 100%;
+  padding: 0 5%;
+
+  //todo deniso max-width
+
+  // height: 136px;
+}
+
+#mainMenu .scroll-content {
+  overflow-y: hidden;
+}
+
+
+ion-header ion-navbar button.bar-button-default, ion-header ion-toolbar button.bar-button-default, #menuIcon {
+  color: #141414;
+}
+
+@media screen and (min-width: 320px){
+  button.item:first-child {
+    margin-top: 20px;
+  }
+
+  ion-list .label, ion-list ion-input {
+    font-size: 16px;
+  }
+
+  .circle {
+    width: 13px;
+    height: 13px;
+    font-size: 11px;
+    bottom: 7px;
+  }
+
+  .logoMenu {
+    //width: 130px;
+    //height: 88px;
+  }
+
+  #faq {
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    width: 40%;
+  }
+
+  #exitButton {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 375px){
+  button.item:first-child {
+    margin-top: 45px;
+  }
+
+  ion-list .label, ion-list ion-input {
+    font-size: 20px;
+  }
+
+  .circle {
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+    bottom: 7px;
+  }
+
+  .logoMenu {
+    //margin-top: 15px;
+    //width: 150px;
+    //height: 102px;
+  }
+
+  #faq {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 40%;
+  }
+
+  #exitButton {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 414px){
+  button.item:first-child {
+    margin-top: 60px;
+  }
+
+  ion-list .label, ion-list ion-input {
+    font-size: 20px;
+  }
+
+  .circle {
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+    bottom: 7px;
+  }
+
+  .logoMenu {
+    //margin-top: 40px;
+    //width: 160px;
+    //height: 109px;
+  }
+
+  #faq {
+    bottom: 20px;
+    left: 10px;
+    width: 45%;
+  }
+
+  #exitButton {
+    bottom: 20px;
+    right: 10px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  button.item:first-child {
+    margin-top: 120px;
+  }
+
+  ion-list .label, ion-list ion-input {
+    font-size: 30px;
+  }
+
+  .circle {
+    width: 18px;
+    height: 18px;
+    font-size: 15px;
+    bottom: 14px;
+  }
+
+  .logoMenu {
+    //margin-top: 100px;
+  }
+
+  #faq {
+    bottom: 25px;
+    left: 10px;
+    width: 40%;
+  }
+
+  #exitButton {
+    bottom: 25px;
+    right: 10px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #faq {
+    bottom: 20px;
+    left: 10px;
+    width: 50%;
+  }
+
+  #exitButton {
+    bottom: 20px;
+    right: 10px;
+    width: 50%;
+  }
+
+  .logoMenu {
+    //width: 165px;
+    //height: 99px;
+    //margin: 60px auto;
+  }
+
+  button.item:first-child {
+    margin-top: 50px;
+  }
+
+  ion-list button.item.item-block.item-md .label.label-md {
+    font-size: 35px;
+  }
+}

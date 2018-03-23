@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <input class="auto-complete" auto-complete [(ngModel)]="filterChoosed.tag" [source]="autocompleteValues"
+  [open-on-focus]="false" [no-match-found-text]="'Извините, ничего не найдено'" (valueChanged)="autocompleteChanged($event)"/>
+
+  <form *ngIf="filterPossibleValues" (changes)="doFilter()" (submit)="doFilter()" class="formAttribute">
+    <div padding-vertical>
+      <ion-segment [(ngModel)]="filterChoosed.type" name="beerType" color="light" [disabled]="isIncompatibleTypeFieldSet">
+        <ion-segment-button *ngFor="let obj of filterPossibleValues.type" [value]="obj">
+          {{obj == 'Классическое' ? 'Пиво' : 'Сидр'}}
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <ion-item>
+      <ion-label>Цвет</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.style" name="beerStyle" [disabled]="!isTypeClassicOrNotSet"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+      <ion-option *ngFor="let obj of filterPossibleValues.style" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Фильтрованое</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.filtration" name="beerFiltration"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+      <ion-option *ngFor="let obj of filterPossibleValues.filtration" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Крепость</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.alcoRange" name="BeerAlcoRanges"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+        <ion-option *ngFor="let obj of filterPossibleValues.alcoRange" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Горечь</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.bitterness" name="beerBitterness" [disabled]="!isTypeClassicOrNotSet"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+      <ion-option *ngFor="let obj of filterPossibleValues.bitterness" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Цена</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.priceRange" name="beerPriceRanges"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+        <ion-option *ngFor="let obj of filterPossibleValues.priceRange" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Регион</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.origin" name="beerOrigin"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+        <ion-option *ngFor="let obj of filterPossibleValues.origin" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Периодичность сорта</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.periodicity" name="beerPeriodicity"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+      <ion-option *ngFor="let obj of filterPossibleValues.periodicity" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Вкус</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.taste" name="beerTaste" [disabled]="!isTypeFruitOrNotSet"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+      <ion-option *ngFor="let obj of filterPossibleValues.taste" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Основа</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.basis" name="beerBasis" [disabled]="!isTypeCitOrNotSet"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+      <ion-option *ngFor="let obj of filterPossibleValues.basis" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Сахар</ion-label>
+      <ion-select [(ngModel)]="filterChoosed.sugar" name="beerSugar" [disabled]="!isTypeCitOrNotSet"
+                  [multiple]="true" [okText]="selectOkText" [cancelText]="selectCancelText">
+      <ion-option *ngFor="let obj of filterPossibleValues.sugar" [value]="obj">{{obj}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </form>
+
+  <!-- if filter is untouched - do not display anything -->
+   <products-list *ngIf="!isFilterEmpty || showInvalid" [products]="products" [filter]="getFilter()" [showInvalid]="showInvalid"></products-list>
+</ion-content>

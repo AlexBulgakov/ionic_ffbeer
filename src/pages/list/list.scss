@@ -1,0 +1,28 @@
+page-list {
+  .grid{
+    padding: 0;
+  }
+
+  ion-item#searchByName{
+    border-radius: 5px;
+  }
+
+  //чтоб как у ion-card
+  [col-12] {padding: 0;}
+  ion-row{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+
+ion-grid.catalog ion-row ion-col.catalog_group {
+  min-height: 140px;
+  vertical-align: bottom;
+  font-size: 26px;
+  border-radius: 10px;
+  background-size: cover;
+  background: rgba(#fff, 0.75) no-repeat center center;
+  color: #000;
+  background-clip: content-box;
+}

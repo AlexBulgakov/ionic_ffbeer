@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Информация о заказе</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card class="justWideCard">
+    <ion-card-title text-center>Спасибо за ваш заказ!</ion-card-title>
+    <ion-card-content *ngIf="orderInfo && orderInfo.deliveryTerminal">
+      Вы можете забрать Ваш заказ в рабочее время по адресу
+      <!--//todo deniso fix addr && time -->
+      <!--<div><b>{{orderInfo.deliveryTerminal.address}}</b></div>-->
+      <div><b>Санкт-Петербург, ул. Кременчугская 11 корпус 1</b></div>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button block color="light" (click)="close()">Закрыть</button>
+</ion-content>

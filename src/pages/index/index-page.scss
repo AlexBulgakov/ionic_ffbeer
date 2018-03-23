@@ -1,0 +1,143 @@
+page-index {
+
+  // todo deniso check is it necessary
+  /*
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    font-size: 50px;
+    color: #fff;
+  }
+  */
+
+  .hello {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .helloLast {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+
+  .qrCode {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .logoIndex {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    text-align: center;
+
+    img{
+      width: 85%;
+    }
+  }
+
+  .bonusCounter {
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 320px){
+    .hello {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .qrCode {
+      display: block;
+      box-sizing: border-box;
+      width: 215px;
+      height: 215px;
+    }
+  }
+
+  @media screen and (min-width: 375px){
+    .hello {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .qrCode {
+      display: block;
+      box-sizing: border-box;
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  @media screen and (min-width: 414px){
+    .qrCode {
+      display: block;
+      box-sizing: border-box;
+      width: 300px;
+      height: 300px;
+    }
+
+    //.arrow_up {
+    //  width: 48px;
+    //  margin-top: 20px;
+    //  margin-bottom: 20px;
+    //}
+
+    .hello {
+      font-size: 25px;
+      margin-bottom: 10px;
+      margin-top: 50px;
+    }
+
+    .bonusCounter{
+      font-weight: 600;
+    }
+
+    //.sale {
+    //  font-size: 25px;
+    //  margin-top: 15px;
+    //}
+  }
+
+  @media screen and (min-width: 768px){
+    .hello {
+      font-size: 25px;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+
+    .qrCode {
+      display: block;
+      box-sizing: border-box;
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .hello {
+      font-size: 25px;
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+
+    .qrCode {
+      display: block;
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+    }
+
+    .arrow_up {
+      width: 50px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+  }
+
+  #qrError{
+    font-weight:bold;
+  }
+}

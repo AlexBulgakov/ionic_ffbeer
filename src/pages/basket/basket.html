@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+    </button>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <products-list *ngIf="products" [products]="products" [filter]="getFilter()" emptyMsg="в корзине пусто"></products-list>
+</ion-content>
+
+<ion-footer padding *ngIf="isBasketFilled()">
+  <ion-toolbar>
+    <button block color="light" ion-button (click)="gotoConfirmation()">Оформить заказ</button>
+  </ion-toolbar>
+</ion-footer>

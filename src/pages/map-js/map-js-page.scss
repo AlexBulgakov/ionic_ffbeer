@@ -1,0 +1,85 @@
+page-map-js {
+  ion-segment-button.segment-button{
+    background-color: transparent!important;
+    border-color: #fff!important;
+    color: #fff!important;
+
+    &.segment-activated{
+      color: #000!important;
+      background-color: #fff!important;
+    }
+  }
+
+  agm-map {
+    height: 100%;
+  }
+
+  ion-pullup ion-toolbar{
+    background-color: rgba(#fff, 1);
+  }
+
+  .addressString{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+  }
+
+  .addressTitle{
+    font-size: 16px;
+  }
+
+  .agm-map-container-inner{
+    border: 2px solid #fff;
+    //border-radius: 5px;
+  }
+
+  .mapToolbar {
+    margin: 0 auto;
+    p, span{
+      font-family: CoreRhino35Light, sans-serif;
+    }
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  .call_now{
+    clear: both;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    margin: 0 20%;
+    background-color: #ffba00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .photo{
+    width: 43%
+  }
+
+  .is_open_now{
+    color: #ffba00;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+
+  .details img{
+    padding: 5px;
+  }
+
+  .details .open_hours{
+    white-space: nowrap;
+    width: 55%;
+    padding: 10px 5px 0;
+  }
+
+  .addr{
+    padding-left: 5px;
+  }
+
+  .footer::before{
+    display: none !important;
+  }
+}

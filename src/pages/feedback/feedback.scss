@@ -1,0 +1,14 @@
+page-feedback {
+  ion-item.item {
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+
+  form {
+    height: 100%;
+
+    .message{
+      height: 72%;
+    }
+  }
+}

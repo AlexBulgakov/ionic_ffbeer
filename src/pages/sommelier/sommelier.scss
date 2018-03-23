@@ -1,0 +1,59 @@
+page-sommelier {
+  //todo deniso made app wide?
+  ion-item .item-inner{
+    border-bottom: 0!important;
+  }
+
+  .ngui-auto-complete-wrapper {
+    margin: 0;
+
+    input {
+      border-radius: 5px;
+    }
+
+    ngui-auto-complete, input {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 51px;
+      font-size: 16px;
+
+      ul li {
+        height: 50px;
+        padding-top: 10px !important;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .formAttribute {
+    ion-item {
+      margin-bottom: 10px;
+      border-radius: 5px;
+      padding: 7px 7px 0 7px;
+      text-transform: uppercase;
+      color: #000;
+      font-size: 16px;
+      background-color: rgba(#fff, 0.75);
+
+      ion-select {
+        max-width: 65%;
+        font-size: 14px;
+      }
+      ion-label.label-value {
+        text-transform: none;
+      }
+    }
+  }
+
+  ion-segment ion-segment-button.segment-button {
+    height: 51px!important;
+    padding-top: 10px;
+    background-color: rgba(#f4f4f4,0.7) !important;
+    border-color: #f4f4f4 !important;
+    color: #000 !important;
+
+    &.segment-activated{
+      font-weight: bold;
+    }
+  }
+}

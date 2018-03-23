@@ -1,0 +1,137 @@
+page-confirm-code {
+
+}
+
+.logoCode {
+  background: url("../../assets/img/logo.png") no-repeat;
+  margin: 50px auto 20px auto;
+  background-size: cover;
+  width: 250px;
+  height: 170px;
+}
+
+#accountCodeWrapper {
+  margin: 0 auto;
+
+  .item-inner{
+    border-bottom: 2px solid rgba(20, 20, 20, 0.9);
+  }
+}
+
+  #accountCode {
+    background: none;
+  }
+
+.confirmCode {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#enterButtonCode {
+  display: block;
+}
+
+@media screen and (min-width: 320px){
+  .logoCode {
+    width: 180px;
+    height: 122px;
+  }
+
+  .confirmCode {
+    font-size: 12px;
+    padding-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  #accountCodeWrapper {
+    max-width: 260px;
+  }
+
+    #accountCode {
+      width: 280px;
+      margin-bottom: 25px;
+    }
+
+      #accountCode .text-input {
+        font-size: 30px;
+      }
+
+  #enterButtonCode {
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .logoCode {
+    width: 200px;
+    height: 136px;
+  }
+
+  .confirmCode {
+    font-size: 14px;
+    padding-top: 25px;
+    padding-bottom: 22px;
+  }
+
+  #accountCodeWrapper {
+    max-width: 280px;
+  }
+
+    #accountCode {
+      width: 280px;
+      margin-bottom: 25px;
+    }
+
+      #accountCode .text-input {
+        font-size: 32px;
+      }
+
+  #enterButtonCode {
+    padding: 26px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .logoCode {
+    width: 220px;
+    height: 150px;
+  }
+
+  .confirmCode {
+    font-size: 16px;
+    padding-bottom: 28px;
+  }
+
+  #accountCodeWrapper {
+    max-width: 300px;
+  }
+
+    #accountCode {
+      width: 280px;
+      margin-bottom: 25px;
+    }
+
+      #accountCode .text-input {
+        font-size: 36px;
+      }
+
+  #enterButtonCode {
+    padding: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logoCode {
+    width: 250px;
+    height: 170px;
+  }
+
+  .confirmCode {
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+
+  #enterButtonCode {
+    padding: 32px;
+  }
+}

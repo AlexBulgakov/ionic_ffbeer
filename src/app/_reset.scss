@@ -1,0 +1,64 @@
+p {
+  padding-bottom: 0;
+  margin: 0;
+}
+
+ion-menu ion-list.list .item-block .item-inner{
+  border-bottom: 0;
+}
+
+.toolbar-background {
+  background: none;
+}
+
+
+/* todo alex - ...ios will be applied only on ios. is it ok? */
+.list-ios > .item-block:first-child {
+  border-top: none;
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+  border-bottom: none;
+}
+
+#exitButton {
+  background: none;
+}
+
+.item-ios[detail-push] .item-inner, button.item-ios:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner {
+  background: none;
+  padding-right: 0;
+}
+
+button.item {
+  background: none;
+}
+
+.item-ios {
+  // todo deniso проверить зачем нужно, оно ломает отображение выпадающих списков
+  // padding-left: 0;
+}
+.list .item-block .item-inner {
+  // todo deniso и это тоже
+  // border-bottom: none;
+}
+
+.text-input {
+  border-bottom: 0;
+  outline: 0;
+}
+
+#enterButtonCode {
+  border-radius: 0;
+}
+
+#accountCodeWrapper {
+  background: none;
+  margin-right: 0;
+}
+
+//#mainMenu .list-ios {
+//  margin-bottom: 0;
+//}
+
+
